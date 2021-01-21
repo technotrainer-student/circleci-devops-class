@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  first-circle-ci-job:
+  create-and-upload-artifact:
     docker:
       - image: circleci/openjdk:8u171-jdk
     steps:
@@ -15,7 +15,7 @@ jobs:
       - store_artifacts:
           path: /home/circleci/project/artifact.txt
           destination: artifactFile
-  second-circle-ci-job:
+  download-circle-ci-artifact:
     docker:
       - image: circleci/openjdk:8u171-jdk
     steps:
@@ -28,4 +28,5 @@ jobs:
 workflows:
   first-workflow:
     jobs:
-      - first-circle-ci-job
+      - create-and-upload-artifact
+      - download-circle-ci-artifact
