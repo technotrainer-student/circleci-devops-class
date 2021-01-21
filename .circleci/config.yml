@@ -9,6 +9,9 @@ jobs:
       - run:
          command:  |
             echo This is my first CircleCI Job.
+      - store_artifacts:
+          path: /home/circleci/project/artifact.txt
+          destination: artifactFile 
             
 workflows:
   first-workflow:
