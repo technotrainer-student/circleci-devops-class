@@ -9,6 +9,9 @@ jobs:
       - run:
          command:  |
             echo This is my first CircleCI Job.
+            echo This is my second job execution >> artifact.txt
+            ls -la # list all files
+            pwd # show current path
       - store_artifacts:
           path: /home/circleci/project/artifact.txt
           destination: artifactFile 
