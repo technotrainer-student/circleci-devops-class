@@ -22,7 +22,7 @@ jobs:
       - checkout
       - run:
          command:  |
-            curl -H "Circle-Token: $api_token"  https://circleci.com/api/v1.1/project/github/technotrainer-student/circleci-devops-training/latest/artifacts | grep -o 'https://[^"]*' | wget --verbose --header "Circle-Token: $api_token"  --input-file -
+            curl -H "Circle-Token: $api_token"  https://circleci.com/api/v1.1/project/github/technotrainer-student/circleci-devops-class/latest/artifacts | grep -o 'https://[^"]*' | wget --verbose --header "Circle-Token: $api_token"  --input-file -
             cat artifactFile
 workflows:
   first-workflow:
