@@ -34,8 +34,11 @@ jobs:
       - checkout
       - run:
          command:   |
-            echo Setting Env Vars  
-    
+            echo Setting Env Vars
+            echo This variable was: $ENV_INSIDE_JOB  
+         environment: 
+           ENV_INSIDE_JOB: set from inside the job
+          
           
             
 workflows:
