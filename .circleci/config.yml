@@ -17,7 +17,7 @@ jobs:
           destination: artifactFile
   download-a-circleci-artifact:
     docker:
-      - image: circleci/openjdp:8u171-jdk
+      - image: circleci/openjdk:8u171-jdk
     steps:
       - checkout
       - run:
