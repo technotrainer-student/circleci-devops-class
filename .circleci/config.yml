@@ -51,5 +51,7 @@ workflows:
       #- download-a-circleci-artifact:
       #    requires:
       #      - create-a-circleci-artifact
-      - test-environment-variables 
+      - test-environment-variables: 
+          context:
+            - my-context
       
