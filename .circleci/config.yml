@@ -26,24 +26,10 @@ jobs:
             https://circleci.com/api/v1.1/project/github/technotrainer-student/circleci-devops-training/latest/artifacts \
             | grep -o 'https://[^"]*' \
             | wget --verbose --header "Circle-Token: $api_token"  --input-file -
-            cat artifactFile
-  test-environment-variables:
-    docker:
-      - image: circleci/openjdk:8u171-jdk
-    steps:
-      - checkout
-      - run:
-         command:  |
-            echo Setting Env Vars
-            echo This variable was: $ENV_INSIDE_JOB  
-         environment: 
-           ENV_INSIDE_JOB: set from inside the job
-          
-          
+            cat artifactFile         
             
 workflows:
   first-workflow:
     jobs:
       - create-a-circleci-artifact
       - download-a-circleci-artifact
-      - test-environment-variables
