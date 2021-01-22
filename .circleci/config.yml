@@ -38,6 +38,8 @@ jobs:
             echo This variable was: $ENV_INSIDE_STEP  
          environment: 
            ENV_INSIDE_STEP: set from inside the step
+    environment:
+      ENV_INSIDE_JOB: set from inside the job
         
 workflows:
   first-workflow:
