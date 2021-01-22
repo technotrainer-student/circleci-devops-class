@@ -36,6 +36,7 @@ jobs:
          command:  |
             echo Setting Env Vars
             echo This variable was: $ENV_INSIDE_STEP  
+            echo This variable was: $ENV_INSIDE_JOB  
          environment: 
            ENV_INSIDE_STEP: set from inside the step
     environment:
