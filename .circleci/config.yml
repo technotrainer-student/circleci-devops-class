@@ -38,7 +38,7 @@ jobs:
             echo This variable was: $ENV_INSIDE_STEP  
             echo This variable was: $ENV_INSIDE_JOB  
             echo The Current branch is: $CIRCLE_BRANCH
-            echo The Current branch is: $demoKey
+            echo The context variable was: $demoKey
          environment: 
            ENV_INSIDE_STEP: set from inside the step
     environment:
@@ -48,8 +48,8 @@ workflows:
   first-workflow:
     jobs:
       - create-a-circleci-artifact
-      - download-a-circleci-artifact:
-          requires:
-            - create-a-circleci-artifact
+      #- download-a-circleci-artifact:
+      #    requires:
+      #      - create-a-circleci-artifact
       - test-environment-variables 
       
