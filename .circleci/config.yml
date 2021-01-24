@@ -38,9 +38,9 @@ jobs:
             echo This variable was: $ENV_INSIDE_STEP  
             echo This variable was: $ENV_INSIDE_JOB  
             echo The Current branch is: $CIRCLE_BRANCH
-            echo This is a file containing a context variable >> $demoKey
+            echo This is a file containing a context variable >> "$demoKey"
             ls -la
-            cat $demoKey
+            cat "$demoKey"
          environment: 
            ENV_INSIDE_STEP: set from inside the step
     environment:
