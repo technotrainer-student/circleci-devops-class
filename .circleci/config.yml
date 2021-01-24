@@ -46,6 +46,8 @@ workflows:
       - download-a-circleci-artifact:
           requires:
             - create-a-circleci-artifact
+      - waiting-for-approval:
+          type: approval      
       - create-a-second-artifact
 
       
