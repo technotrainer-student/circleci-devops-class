@@ -39,6 +39,7 @@ jobs:
             echo This variable was: $ENV_INSIDE_JOB  
             echo The Current branch is: $CIRCLE_BRANCH
             echo The context variable was: $demoKey
+            echo This env var named 'project_var' is: $project_var
          environment: 
            ENV_INSIDE_STEP: set from inside the step
     environment:
