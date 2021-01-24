@@ -38,7 +38,8 @@ jobs:
             echo This variable was: $ENV_INSIDE_STEP  
             echo This variable was: $ENV_INSIDE_JOB  
             echo The Current branch is: $CIRCLE_BRANCH
-            echo The context variable was: $demoKey
+            echo The context variable was: $demoKey >> context-artifact.txt
+            cat context-artifact.txt
          environment: 
            ENV_INSIDE_STEP: set from inside the step
     environment:
